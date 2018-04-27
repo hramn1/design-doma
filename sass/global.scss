@@ -1,0 +1,64 @@
+@font-face {
+  font-family:"Roboto";
+  font-weight:700;
+  font-style:normal;
+  src:url(../fonts/Robotobold.woff2) format("woff2"),
+  url(../fonts/Robotobold.woff) format("woff");
+}
+@font-face {
+  font-family:"Roboto";
+  font-weight:400;
+  font-style:normal;
+  src:url(../fonts/Roboto.woff2) format("woff2"),
+  url(../fonts/Roboto.woff) format("woff");
+}
+img {
+  max-width:100%;
+}
+a:hover {
+  opacity: 0.7;
+}
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: $grey-color;
+  font-size: 14px;
+  line-height: 140%;
+  color: #232323;
+  @media(min-width: $tablet-lg) {
+    font-size: 16px;
+  }
+}
+h1{
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.3em;
+}
+h3, h4, h5, h6{
+	font-size: 1.2em;
+}
+a {
+	text-decoration: none;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  @media(min-width: $mobile-lg){
+    width: 450px
+  }
+  @media(min-width: 600px){
+    width: 555px
+  }
+  @media(min-width: $tablet-sm){
+    width: 710px;
+  }
+  @media(min-width: $tablet-lg)
+  {
+    width: 950px;
+  }
+  @media(min-width: $desktop){
+    width: 1150px;
+  }
+}
