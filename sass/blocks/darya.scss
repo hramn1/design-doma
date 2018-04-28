@@ -1,7 +1,14 @@
 .darya{
 	padding: 20px 0 30px;
 	background-color: $white;
+	font-size: 18px;
 	&-block{
 		display: flex;
 	}
 } 
+.darya .col-1{
+padding: 40px 5px 20px;
+}
+.darya-welcome{
+	margin-top: 80px;
+}
