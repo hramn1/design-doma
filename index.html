@@ -3,16 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-  <meta name="format-detection" content="telephone=no">
+<!-- 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+ -->  <meta name="format-detection" content="telephone=no">
 <link href = "css/style.min.css" rel="stylesheet" type="text/css">
+<script src="js/curs.js" defer></script>
 </head>
 <body>
-	<header class="main-header">
-		<div class="container">
+	<header class="main-header slider">
+		<div class="header-slide header-slide--1 showing"></div>
+		<div class="header-slide header-slide--2"></div>
+		<div class="header-slide header-slide--3"></div>
+		<div class="header-slide header-slide--4"></div>
+		<div class="header-slide header-slide--5"></div>
+		<div class="header-slide header-slide--6"></div>
+		<div class="header-slide header-slide--7"></div>
+		<div class="header-slide header-slide--8"></div>
+		<div class="container welcome-head">
 			<section class="head-top">
-				<a href="/" class="head-top__logo">
-					<img src="" alt="">
+				<a href="#" class="head-top__logo">
+					<img src="img/logo.png" alt="логотип">
 				</a>
 				<div class="head-top__text">
 					<h3>Сам себе дизайнер</h3>
@@ -25,34 +34,37 @@
 					<a href="">Задать вопрос</a>
 				</nav>
 			</section>
-			<h1 class="main-header__title">МЫ ПОМОЖЕМ ВАМ СОЗДАТЬ ПРОЕКТ СОБСТВЕННОГО ДОМА</h1>
-			<span class="main-header__string"></span>
-			<button class="btn btn--start">Стартовать</button>
+			<h1 class="main-header__title">МЫ ПОМОЖЕМ ВАМ СОЗДАТЬ<br> ПРОЕКТ СОБСТВЕННОГО ДОМА Мечты</h1>
+			<div class="main-header__string">Вы готовы<span></span></div>
+			<button class="btn btn--start">Стартовать!</button>
 		</div>
 	</header>
 	<main>
 			<section class="graduates">
-
-				<div class="graduates__text">
-					<p >Школа дизайна интерьеров Пиковой Дарьи</p>
-					<p >лидер в области онлайн обучения дизайну интерьеров</p>
+				<div class="container graduates-inner">
+				<div class="graduates-inner__text">
+					<h3 ><span>Школа дизайна интерьеров Пиковой Дарьи</span><br>лидер в области онлайн обучения дизайну интерьеров</h3>
 					<p >Основана 15 марта 2015 года и сегодня эта международная компания, которая обучает русскоязычных людей из 25 стран мира</p>
 					<p >Наши студенты получают реальный дизайнер -проект будушего дома своей мечты</p>
 				</div>
-				<div class="graduates__video">
-					<video src=""></video>
+				<div class="graduates-inner__video">
+					<video  height="350" width="500" controls >
+						      <source src="video/video-grad.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+					</video>
+				</div>
 				</div>
 			</section>
 			<section class="darya">
 				<div class="container darya-block">
 					<div class="col-1">
 						<p class="darya-welcome">Давайте знакомиться!</p>
-						<p>Меня зовут Дарья Пикова!</p>
-						<p>Я - руководитель студии дизайна интерьеров и онлайн школы по обучению<br> дизайна интерьеров</p>
+						<p class="darya-name">Меня зовут Дарья Пикова!</p>
+						<p class = "darya-">Я - руководитель студии дизайна интерьеров и онлайн школы по обучению<br> дизайна интерьеров</p>
 						<blockquote> Чтобы стать профессионалом своего дела, я долго училась и оттачивала свои навыки: художественная школа, высшее архитектурное образование, затем профессиональная деятельность, работа в итальянской архитектурной студии, специализированные курсы дизайна, посещение международных выставок.</blockquote>
-						<p>8 лет работы дизайнером <a href="http://pikova.com/">pikova.com</a><br>
-						4 года преподавательской деятельности <a href="https://www.facebook.com/pikovadesign/"><img src="img/facebook-square.svg" alt=""></a>
-						<a href="https://www.instagram.com/pikova_design/?hl=ru"><img src="img/instagram.svg" alt=""></a>
+						<p class="darya-present">8 лет работы дизайнером <a href="http://pikova.com/">pikova.com</a><br>
+						4 года преподавательской деятельности <a href="https://www.facebook.com/pikovadesign/"><img class="social fb" src="img/facebook-square.svg" alt=""></a>
+						<a href="https://www.instagram.com/pikova_design/?hl=ru"><img class ="social inst" src="img/instagram.svg" alt=""></a>
 					</p>
 					</div>
 					<div class="col-2">
@@ -64,9 +76,7 @@
 				<div class="container">
 					<div class="slider-video">
 						<div class="slide slide--1">
-							<div class="col-1">
-								<video src=""></video>
-							</div>
+								<div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -40px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 							<div class="review-info">
 								<h3 class="review-info__title">Власова Екатерина</h3>
 								<p class="review-info__adress">г. Москва </p>
@@ -78,13 +88,14 @@
 			</section>
 			<section class="fences">
 				<div class="container">
-				<div class="fence-1">
+					<div class="fence-block">
+				<div class="fence student-ico">
 				</div>
 								<div class="fence-2">
 				</div>
 								<div class="fence-3">
 				</div>
-								<div class="fence-3">
+								<div class="fence-4">
 				</div>
 				</div>
 			</section>

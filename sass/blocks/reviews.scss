@@ -1,0 +1,30 @@
+.reviews{
+	padding: 30px 5px 50px;
+	background-color: #fff;
+} 
+.slide{
+	display: flex;
+	&__video{
+		width: 50%;
+	}
+}
+.review-info{
+	width: 50%;
+	&__desc{
+		background-color: rgb(248, 242, 226);
+padding: 40px;
+margin: 0 0 0 -10px;
+position: relative;
+	}
+	&__title{
+		font-size: 30px;
+padding: 0 0 10px 40px;
+margin: 0;
+text-transform: uppercase;
+font-weight: 900;
+	}
+	&__adress{
+		font-style: italic;
+padding: 0 0 30px 40px;
+	}
+}

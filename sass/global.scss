@@ -12,6 +12,12 @@
   src:url(../fonts/Roboto.woff2) format("woff2"),
   url(../fonts/Roboto.woff) format("woff");
 }
+@font-face {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/fontello.woff2) format("woff2");
+}
 img {
   max-width:100%;
 }
