@@ -1,8 +1,8 @@
 .fences{
-	min-height:500px;
 	position: relative;
 	background-image: url(/img/bg-fense.jpg);
 	background-size: cover;
+	padding: 100px 20px 60px;
 	&::after{
 		content: "";
 		position: absolute;
@@ -17,8 +17,11 @@
 	display: flex;
 	z-index: 5;
 	position: relative;
+	justify-content: space-around;
 }
 .fence{
+	text-align: center;
+	color:$white;
 	&::before{
 		font-family: "fontello";
 font-style: normal;
@@ -37,5 +40,16 @@ text-shadow: 1px 1px 1px rgba(127,127,127,0.3);
 }
 .student-ico::before{
 	content: '\e80c'
-
+}
+.cup-ico::before{
+	content: '\e817'
+}
+.team-ico::before{
+	content: '\e81b'
+}
+.youtube-ico::before{
+	content: '\e815'
+}
+.money-ico::before{
+	content: '\e81d'
 }
