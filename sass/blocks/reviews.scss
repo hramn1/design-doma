@@ -1,5 +1,5 @@
 .reviews{
-  padding: 30px 5px 50px;
+  padding: 50px 5px 50px;
   background-color: #fff;
 } 
 .slide{
@@ -15,6 +15,12 @@
     padding: 40px;
     margin: 0 0 0 -10px;
     position: relative;
+		font-style: italic;
+		color: #636363;
+		& span {
+			display: block;
+			margin-bottom:1em;
+		}
   }
   &__title{
     font-size: 30px;
@@ -25,6 +31,6 @@
   }
   &__adress{
     font-style: italic;
-    padding: 0 0 30px 40px;
+    padding: 0 0 0 40px;
   }
 }
