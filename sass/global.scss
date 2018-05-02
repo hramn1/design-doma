@@ -35,36 +35,37 @@ body {
   }
 }
 h1{
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 h2 {
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 h3, h4, h5, h6{
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 .container {
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
   box-sizing: border-box;
-  @media(min-width: $mobile-lg){
-    width: 450px
-  }
-  @media(min-width: 600px){
-    width: 555px
-  }
-  @media(min-width: $tablet-sm){
-    width: 710px;
-  }
-  @media(min-width: $tablet-lg)
-  {
-    width: 950px;
-  }
-  @media(min-width: $desktop){
-    width: 1150px;
-  }
+  width: 1190px;
+  // @media(min-width: $mobile-lg){
+  //   width: 450px
+  // }
+  // @media(min-width: 600px){
+  //   width: 555px
+  // }
+  // @media(min-width: $tablet-sm){
+  //   width: 710px;
+  // }
+  // @media(min-width: $tablet-lg)
+  // {
+  //   width: 950px;
+  // }
+  // @media(min-width: $desktop){
+  //   width: 1150px;
+  // }
 }

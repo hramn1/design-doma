@@ -1,55 +1,66 @@
 .fences{
-	position: relative;
-	background-image: url(/img/bg-fense.jpg);
-	background-size: cover;
-	padding: 100px 20px 60px;
-	&::after{
-		content: "";
-		position: absolute;
-		top:0;
-		bottom:0;
-		right:0;
-		left:0;
-		background-color: rgba(0,0,0, 0.7);
-	}
-} 
+  position: relative;
+  background-image: url(/img/bg-fense.jpg);
+  background-size: cover;
+  padding: 100px 20px 60px;
+  &::after{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0, 0.7);
+  }
+}
 .fence-block{
-	display: flex;
-	z-index: 5;
-	position: relative;
-	justify-content: space-around;
+  display: flex;
+  z-index: 5;
+  position: relative;
+  justify-content: space-between;
 }
 .fence{
-	text-align: center;
-	color:$white;
-	&::before{
-		font-family: "fontello";
-font-style: normal;
-font-weight: normal;
-color: rgb(255, 255, 255);
-font-size: 80px;
-display: inline-block;
-margin-right: .2em;
-text-align: center;
-font-variant: normal;
-text-transform: none;
-line-height: 1em;
-margin-left: .2em;
-text-shadow: 1px 1px 1px rgba(127,127,127,0.3);
-	}
+  text-align: center;
+  color:$white;
+  &__stat{
+    font-size: 24px;
+  }
+  &__text{
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(127,127,127,0.3);
+  }
+  &::before{
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    display: inline-block;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    text-shadow: 1px 1px 1px rgba(127,127,127,0.3);
+  }
+}
+.fence:last-child .fence__text{
+  font-size: 85%;
 }
 .student-ico::before{
-	content: '\e80c'
+  content: '\e80c'
 }
 .cup-ico::before{
-	content: '\e817'
+  content: '\e817'
 }
 .team-ico::before{
-	content: '\e81b'
+  content: '\e81b'
 }
 .youtube-ico::before{
-	content: '\e815'
+  content: '\e815'
 }
 .money-ico::before{
-	content: '\e81d'
+  content: '\e81d'
 }
