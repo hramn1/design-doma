@@ -26,11 +26,14 @@
 .tarif{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
 }
 .tarif-item{
   box-shadow: 0 1px 2px rgba(0,0,0,0.3);
   background-color: lighten($grey-color, 5%);
   text-align: center;
+  margin-bottom: 20px;
   width: 250px;
   transition: transform 400ms ease-in;
   &:hover{
@@ -61,6 +64,14 @@
     padding: 10px;
     margin-bottom: 5px;
     border-bottom: 1px solid rgb(238, 238, 238);
+    & span{
+      font-size: 16px;
+      text-transform: lowercase;
+      font-weight: 400;
+      color: #636363;
+      display: block;
+      margin-top: 7px;
+    }
   }
   &__price-sub{
             padding: 10px;
@@ -98,4 +109,8 @@
   &:hover{
     background: darken(rgb(2, 136, 209), 10%);
   }
+}
+.tarifi .social{
+  width: 25px;
+  margin-left: 0;
 }

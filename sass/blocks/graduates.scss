@@ -13,8 +13,7 @@
     }
   }
   &__text{
-    width:50%;
-    flex-grow:1;
+    width:60%;
   }
 }
 .graduates-inner__text h3 span {
@@ -27,4 +26,19 @@
   margin-bottom: 40px;
   padding-bottom:40px;
   border-bottom: 2px solid $grey-color;
+}
+.disain{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  &__img{
+    width: 220px;
+    margin:10px;
+    transition: 400ms;
+    &:hover{
+      transform: scale(2.5);
+      transition: 400ms;
+    }
+  }
 }

@@ -8,6 +8,14 @@
     width: 50%;
   }
 }
+.slider-video{
+  overflow: hidden;
+  display: flex;
+}
+.video-slide{
+  width: 100%;
+  flex-shrink:0;
+}
 .review-info{
   width: 50%;
   &__desc{
