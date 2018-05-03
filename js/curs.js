@@ -1,4 +1,6 @@
-
+let videoStudent = document.querySelector('.graduates-inner__video video')
+videoStudent.volume = 0.02;
+videoStudent.setAttribute('autoplay','autoplay');
 
 let stringArray = [
 'создать проект дома своей мечты?',
@@ -58,3 +60,6 @@ function runTheTicker(){
 
 
 startTicker();
+
+
+
