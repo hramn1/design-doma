@@ -61,7 +61,7 @@ function runTheTicker(){
 
 startTicker();
 
-setInterval(slideVideo,7000);
+//setInterval(slideVideo,7000);
 
 let slideReviews = document.querySelectorAll('.video-slide');
 let currentWidthSlide = 0;

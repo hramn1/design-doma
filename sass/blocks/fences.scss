@@ -64,3 +64,18 @@
 .money-ico::before{
   content: '\e81d'
 }
+@media(max-width: $tablet-lg){
+  .fence-block{
+    flex-wrap:wrap;
+    justify-content: space-around;
+  }
+  .fence{
+    flex-basis: 42%;
+    margin: 10px 5px;
+  }
+  }
+  @media(max-width: $mobile-lg){
+    .fence{
+      flex-basis: 90%;
+    }
+  }

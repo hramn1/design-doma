@@ -36,9 +36,41 @@
     margin: 0;
     text-transform: uppercase;
     font-weight: 900;
+    line-height: 130%;
   }
   &__adress{
     font-style: italic;
     padding: 0 0 0 40px;
   }
 }
+.video-control{
+  text-align: center;
+  display: flex;
+  margin: 10px auto;
+  width: 60%;
+  justify-content: space-between;
+}
+.video-control__left{
+  width: 30px;
+  cursor:pointer;
+}
+.video-control__right{
+  width: 30px;
+  cursor:pointer;
+}
+  @media(max-width: $tablet-sm){
+    .slide{
+      flex-wrap: wrap;
+      &__video{
+        width: 100%;
+        height: 300px;
+      }
+    }
+    .review-info{
+      width: 100%;
+      &__desc{
+        margin: 0;
+      }
+    }
+
+  }
