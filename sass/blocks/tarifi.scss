@@ -108,6 +108,7 @@
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  display: inline-block;
   &:hover{
     background: darken(rgb(2, 136, 209), 10%);
   }

@@ -153,10 +153,10 @@
     order:2;
     align-self:center;
     & a{
-      color: rgb(2, 136, 209);
+      color: $white;
       padding: 3px 6px 3px 0;
       font-weight: 700;
-      text-shadow: 1px 1px 0px rgb(238, 238, 238);
+      text-shadow: 1px 1px 0px rgb(21, 21, 21);
       margin: 2px 0;
       font-size: 13px;
       text-transform: uppercase;

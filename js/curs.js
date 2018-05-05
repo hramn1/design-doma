@@ -1,19 +1,32 @@
-let videoStudent = document.querySelector('.graduates-inner__video video')
-videoStudent.volume = 0.02;
-videoStudent.setAttribute('autoplay','autoplay');
-
+let videoStudent = document.querySelector('.graduates-inner__video video');
 let stringArray = [
 'создать проект дома своей мечты?',
 'начать карьеру дизайнера интерьеров?'
 ]
 let CharTimeout = 150;
 let StoryTimeout = 2000;
-
 let sliderHeader = document.querySelectorAll('.header-slide');
+let currentslide = 0;
+let slideTime = setInterval(slideVideoLeft,7000);
+let slideReviews = document.querySelectorAll('.video-slide');
+let currentWidthSlide = 0;
+let leftBtnSlide = document.querySelector('.video-control__left');
+let rightBtnSlide = document.querySelector('.video-control__right');
+
+videoStudent.volume = 0.02;
+videoStudent.setAttribute('autoplay','autoplay');
 
 setInterval(nextSlide,4000);
+startTicker();
 
-let currentslide = 0;
+leftBtnSlide.addEventListener('click', function(){
+  slideVideoRight();
+  clearInterval(slideTime);
+});
+rightBtnSlide.addEventListener('click', function(){
+  slideVideoLeft();
+  clearInterval(slideTime);
+});
 
 function nextSlide(){
   if(currentslide > 7){
@@ -28,53 +41,51 @@ function nextSlide(){
 }
 
 function startTicker(){
-	 massiveItemCount =  stringArray.length;
-	 currentStory     = -1;
-	 currentLength    = 0;
-	 spanPrint     = document.querySelector('.main-header__print');
-	runTheTicker();     
+   massiveItemCount =  stringArray.length;
+   currentStory     = -1;
+   currentLength    = 0;
+   spanPrint     = document.querySelector('.main-header__print');
+  runTheTicker();     
 }
 function runTheTicker(){
-	let myTimeout;  
-	// Переход к следующему элементу
-	if(currentLength == 0){
-		currentStory++;
-		currentStory      = currentStory % massiveItemCount;
-		 storySummary      = stringArray[currentStory].replace(/"/g,'-');      
-	}
-	// Располагаем текущий текст в анкор с печатанием
-	spanPrint.innerHTML = storySummary.substring(0,currentLength);
-	// Преобразуем длину для подстроки и определяем таймер
-	if(currentLength != storySummary.length){
+  let myTimeout;  
+  if(currentLength == 0){
+    currentStory++;
+    currentStory      = currentStory % massiveItemCount;
+     storySummary      = stringArray[currentStory].replace(/"/g,'-');      
+  }
+  spanPrint.innerHTML = storySummary.substring(0,currentLength);
 
-		currentLength++;
-		myTimeout = CharTimeout;
-		
-	} else {
-		currentLength = 0;
-		myTimeout = StoryTimeout;
-	}
-	// Повторяем цикл с учетом задержки
-	setTimeout("runTheTicker()", myTimeout);
+  if(currentLength != storySummary.length){
+    currentLength++;
+    myTimeout = CharTimeout;
+  } else {
+    currentLength = 0;
+    myTimeout = StoryTimeout;
+  }
+  setTimeout("runTheTicker()", myTimeout);
 }
 
 
-startTicker();
+function slideVideoLeft() {
+  if(currentWidthSlide <= -900){
+    currentWidthSlide = 100
+  }
+  currentWidthSlide -= 100;
+  for (var i = 0; i < slideReviews.length; i++) {
+    slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
+    slideReviews[i].style.transition = '2000ms';
+  }
 
-//setInterval(slideVideo,7000);
-
-let slideReviews = document.querySelectorAll('.video-slide');
-let currentWidthSlide = 0;
-function slideVideo() {
-	if(currentWidthSlide <= -900){
-		currentWidthSlide = -100
-	}
-	currentWidthSlide -= 100;
-	for (var i = 0; i < slideReviews.length; i++) {
-		slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
-		slideReviews[i].style.transition = '2000ms';
-	}
-
-
+}
+function slideVideoRight() {
+  if(currentWidthSlide >= 0){
+    currentWidthSlide = -100
+  }
+  currentWidthSlide += 100;
+  for (var i = 0; i < slideReviews.length; i++) {
+    slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
+    slideReviews[i].style.transition = '2000ms';
+  }
 }
 
