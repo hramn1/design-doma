@@ -36,10 +36,10 @@
   &__img{
     width: 200px;
     margin:10px;
-    transition: 400ms;
+    transition: 600ms;
     &:hover{
-      transform: scale(2.5);
-      transition: 400ms;
+      transform: scale(1.5);
+      transition: 600ms;
     }
   }
 }
