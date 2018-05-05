@@ -14,7 +14,7 @@ let leftBtnSlide = document.querySelector('.video-control__left');
 let rightBtnSlide = document.querySelector('.video-control__right');
 
 videoStudent.volume = 0.02;
-videoStudent.setAttribute('autoplay','autoplay');
+videoStudent.setAttribute('autoplay',"");
 
 setInterval(nextSlide,4000);
 startTicker();
