@@ -88,4 +88,23 @@ function slideVideoRight() {
     slideReviews[i].style.transition = '2000ms';
   }
 }
+// let vvg = document.querySelector('.btn--offer')
 
+// vvg.addEventListener('click', function (evt){
+// 	evt.preventDefault();
+	
+// 	var y = 500;
+// 	var g = function(){ 
+// 				if(y===0){
+// 					clearInterval(b)
+// 				}
+
+// 		y-=50;
+
+// 		window.scrollTo(0,y)
+
+
+		
+// 	}
+// 	var b =	setInterval(g, 50);
+// })
