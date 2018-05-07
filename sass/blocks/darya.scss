@@ -70,3 +70,8 @@
     background-image: none;
 }
 }
+@media(max-width: $mobile-lg) {
+	.darya .col-2{
+		display: none;
+	}
+}
