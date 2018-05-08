@@ -111,8 +111,12 @@ function slideVideoRight() {
 let tarifiLink = document.querySelectorAll('.head-top__menu a');
 tarifiLink.forEach(function(item){
 item.addEventListener('click',function(){
-	var id = item.href
+	var id = item.hash
+	var ап = document.querySelector('#tarifiId')
+	var h = ап.offsetTop
 		console.log(id)
+		console.log(item)
+		console.log(h)
 })
 })
 
