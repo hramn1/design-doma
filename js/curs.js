@@ -88,39 +88,49 @@ function slideVideoRight() {
     slideReviews[i].style.transition = '2000ms';
   }
 }
-// let vvg = document.querySelector('.btn--offer')
-
-// vvg.addEventListener('click', function (evt){
-// 	evt.preventDefault();
-	
-// 	var y = 500;
-// 	var g = function(){ 
-// 				if(y===0){
-// 					clearInterval(b)
-// 				}
-
-// 		y-=50;
-
-// 		window.scrollTo(0,y)
-
-
-		
-// 	}
-// 	var b =	setInterval(g, 50);
-// })
 let tarifiLink = document.querySelectorAll('.head-top__menu a');
+let gridId = document.querySelector('#grad');
+let tarifiId = document.querySelector('#tarifiId');
+let otziviId = document.querySelector('#otzivi');
+let fd = document.querySelector('.head-top__menu a');
+let heightLink = 0;
+
+
 tarifiLink.forEach(function(item){
-item.addEventListener('click',function(){
-	var id = item.hash
-	var ап = document.querySelector('#tarifiId')
-	var h = ап.offsetTop
-		console.log(id)
-		console.log(item)
-		console.log(h)
-})
-})
-
-function topset(evt){
-	evt.preventDefault();
-
+item.addEventListener('click',function(evt){
+ let heightTop = 0;
+  if(item.hash === '#tarifiId'){
+    evt.preventDefault();
+   heightLink = tarifiId.offsetTop;
+} else if (item.hash === '#otzivi'){
+      evt.preventDefault();
+   heightLink = otziviId.offsetTop;
 }
+   
+   function topset(){
+  if(heightTop > heightLink){
+          clearInterval(f)
+        }
+        heightTop+=50
+window.scrollTo(0,heightTop);
+
+  }
+var f = setInterval(topset, 20);  
+})
+})
+// fd.addEventListener('click', function(evt){
+//   
+//   evt.preventDefault();
+//   console.log(heightTop);
+//   heightLink = gridId.offsetTop;
+//      function topset(){
+//   if(heightTop > heightLink){
+//           clearInterval(f)
+//         }
+//         heightTop+=50
+// window.scrollTo(0,heightTop);
+
+//   }
+// var f = setInterval(topset, 50);  
+// })
+
