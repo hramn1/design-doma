@@ -42,6 +42,9 @@
   font-size: 40px;
   font-weight: 900;
 }
+.darya-mob{
+  display: none;
+}
 .darya-present{
   font-size: 20px;
   line-height: 150%;
@@ -74,4 +77,14 @@
 	.darya .col-2{
 		display: none;
 	}
+  .darya-mob{
+    display: block;
+    margin: 0 auto;
+  }
+  .darya blockquote{
+    padding: 10px 6px;
+    margin: 0;
+    text-align:left;
+    font-size: 16px;
+  }
 }

@@ -29,19 +29,19 @@
           <p>создай проект собственного дома</p>
         </div>
         <nav class="head-top__menu">
-          <a href="">О студии</a>
-          <a href="">Тарифы</a>
-          <a href="">Отзывы</a>
-          <a href="">Задать вопрос</a>
+          <a href="#grad">О студии</a>
+          <a id="linktarif" href="#tarifiId">Тарифы</a>
+          <a href="#otzivi">Отзывы</a>
+          <a href="https://api.whatsapp.com/send?phone=79625187748">Задать вопрос</a>
         </nav>
       </section>
       <h1 class="main-header__title">МЫ ПОМОЖЕМ ВАМ СОЗДАТЬ<br> ПРОЕКТ СОБСТВЕННОГО ДОМА Мечты</h1>
       <div class="main-header__string">Вы готовы <span class="main-header__print"></span></div>
-      <a class="btn btn--start" href="#tarifiId">Стартовать!</a>
+      <a class="btn btn--start" href="#grad">Стартовать!</a>
     </div>
   </header>
   <main>
-    <section class="graduates">
+    <section class="graduates" id="grad">
       <div class="container graduates-inner">
         <div class="graduates-inner__text">
           <h3><span>Школа дизайна интерьеров Пиковой Дарьи</span><br>Лидер в области онлайн обучения дизайну интерьеров</h3>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="graduates-inner__video">
-          <video  height="350" controls loop autoplay muted>
+          <video height="350" width="500"  controls loop>
               <source src="video/video-grad.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
           </video>
         </div>
@@ -68,6 +68,7 @@
           <div class="col-1">
             <p class="darya-welcome">Давайте знакомиться!</p>
             <p class="darya-name">Меня зовут Дарья Пикова!</p>
+            <img class="darya-mob" src="/img/dasha-mob.png" alt="">
             <p class = "darya-text">Я - руководитель студии дизайна и онлайн школы по обучению<br> дизайну интерьеров</p>
             <blockquote> Чтобы стать профессионалом своего дела, я долго училась и оттачивала свои навыки: художественная школа, высшее архитектурное образование, затем профессиональная деятельность, работа в итальянской архитектурной студии, специализированные курсы дизайна, посещение международных выставок.</blockquote>
             <p class="darya-present">8 лет работы дизайнером <a href="http://pikova.com/" target="_blank">pikova.com</a><br>
@@ -81,19 +82,16 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="otzivi">
       <div class="container">
         <div class="slider-video">
         	<div class="video-slide slide--1">
 	          <div class="slide">
 	            <div class= "slide__video"><iframe src="https://player.vimeo.com/video/265143954" style="width: 100%; height: 100%; margin-top: -55px; border:0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
-	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
-								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
-								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
-								Спасибо огромное Всей команде! Огромных творческий успехов ! Это были прекрасные два месяца !  </p>
+	              <h3 class="review-info__title">Минаева Екатерина</h3>
+	              <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
+	              <p class="review-info__desc"><span>Команда, Вы большие молодцы! Спасибо! Очень хороший курс, очень грамотный, а главное - ничего лишнего и никакой ненужной информации. Курс позволяет сделать проект с нуля новичку, это очень круто! Люблю обучение которое сразу дает результат. </span>В Это позволяет видеть что ты постоянно прогрессируешь в прокачивании данного навыка. Вообще, я рада что взяла этот курс до начала строительства дома.</p>
 	            </div>
 	          </div>
           </div>
@@ -101,12 +99,10 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">fdfd Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
-	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
-								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
-								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
-								Спасибо огромное Всей команде! Огромных творческий успехов ! Это были прекрасные два месяца !  </p>
+	              <h3 class="review-info__title">Гороховская Светлана</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
+	              <p class="review-info__desc"><span>Большое спасибо Дарье за такой полезный и познавательный курс и всей команды за помощь в создании моего проекта.  </span>Благодаря вам теперь я уже отчетливо представляю каким будет мой дом всего через несколько месяцев.
+							 </p>
 	            </div>
 	          </div>
           </div>
@@ -114,8 +110,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Татьяна Мартыненко</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -127,8 +123,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Ирина Николаева</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -140,12 +136,10 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
-	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
-								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
-								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
-								Спасибо огромное Всей команде! Огромных творческий успехов ! Это были прекрасные два месяца !  </p>
+	              <h3 class="review-info__title">Яна Рожковец</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
+	              <p class="review-info__desc"><span>Курс полностью оправдал мои ожидания. Я получила все то, что хотела и даже больше. Смело могу сказать, что мне совершенно не жалко ни потраченных денег, ни времени.</span><span>
+								 Курс ССД - это действительно качественный "продукт". Единственное, чего немного не хватило - это полной удовлетворенности результатом в плане визуальной "оформительской" части (коллажи, цветовая гамма интерьера и тп.). </span>Но тут, наверное, больше претензии к себе самой (как говорится, если чувство прекрасного и чувство стиля страдает, то с этим сложно что-то сделать), Может быть, если бы преподаватель побольше критиковал или направлял в этом плане, то вышло лучше...а может и нет:)</p>
 	            </div>
 	          </div>
           </div>
@@ -153,8 +147,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Алиня Ярулина</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -166,8 +160,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Елена Туркина</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -179,8 +173,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Анна Васильцова</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -192,8 +186,8 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
+	              <h3 class="review-info__title">Анастасия Алтунина</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
 	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
 								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
 								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
@@ -205,12 +199,9 @@
 	          <div class="slide">
 	            <div class= "slide__video"><iframe style="width: 100%; height: 100%; margin-top: -55px" src="https://player.vimeo.com/video/262162482?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 	            <div class="review-info">
-	              <h3 class="review-info__title">Власова Екатерина</h3>
-	              <p class="review-info__adress">г. Москва </p>
-	              <p class="review-info__desc"><span>Я хочу поблагодарить весь большой коллектив, который приложил руку к созданию такого чудесного курса!</span><span>
-								Все продумано до мелочей : на курсе не было нерешаемых задач , всё разжёвано до мелочей. Радовало и то, что всегда была обратная связь с преподавателем.</span><span>
-								И как же приятно в результате держать в руках созданный тобой проект - это просто невероятное ощущение ! Никогда бы не подумала, что смогу это сделать)</span>
-								Спасибо огромное Всей команде! Огромных творческий успехов ! Это были прекрасные два месяца !  </p>
+	              <h3 class="review-info__title">Екатерина Рыкова</h3>
+	               <p class="review-info__adress">Курс Сам Себе Дизайнер</p>
+	              <p class="review-info__desc">Спасибо вам большое за чудесный курс! Очень рада, что решилась его пройти. Результатом я очень довольна. Хочу развиваться дальше в этом направлении.</p>
 	            </div>
 	          </div>
           </div>
@@ -241,7 +232,7 @@
             <p class="fence__text">Наша команда</p>
           </div>
           <div class="fence icon-money-bag">
-            <p class="fence__stat">108 000 000</p>
+            <p class="fence__stat stat--last">108 000 000</p>
             <p class="fence__text">Студенты сэкономили на услугах<br> профессионального дизайнера</p>
           </div>
         </div>

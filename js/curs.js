@@ -108,3 +108,15 @@ function slideVideoRight() {
 // 	}
 // 	var b =	setInterval(g, 50);
 // })
+let tarifiLink = document.querySelectorAll('.head-top__menu a');
+tarifiLink.forEach(function(item){
+item.addEventListener('click',function(){
+	var id = item.href
+		console.log(id)
+})
+})
+
+function topset(evt){
+	evt.preventDefault();
+
+}

@@ -22,6 +22,16 @@
 .tarifi{
   background-color: #fff;
   padding: 30px 5px 55px;
+  &__title{
+    text-align: center;
+    margin: 20px auto 25px;
+    text-transform: uppercase;
+  }
+  &-text{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+  }
 }
 .tarif{
   display: flex;
@@ -115,7 +125,7 @@
 }
 .tarifi .social{
   width: 25px;
-  margin-left: 0;
+  margin-left: 10px;
 }
   @media(max-width: $tablet-lg){
     .offer__title{

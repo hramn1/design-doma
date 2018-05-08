@@ -75,7 +75,33 @@
   }
   }
   @media(max-width: $mobile-lg){
+    .fences{
+      padding: 15px 5px 10px;
+    }
     .fence{
       flex-basis: 90%;
+      display: flex;
+      justify-content: space-between;
+    &::before{
+      font-size: 40px;
+    }
+    &__stat{
+      align-self:center;
+      margin: 0 5px;
+      font-size: 14px;
+    }
+    &__text{
+      align-self: center;
+      flex-basis: 50%;
+      margin: 0 5px;
+      font-size: 11px;
     }
   }
+  .fence:last-child .fence__text{
+  font-size: 7px;
+}
+.stat--last{
+  font-size: 13px;
+}
+}
+  
