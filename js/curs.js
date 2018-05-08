@@ -2,7 +2,7 @@ let videoStudent = document.querySelector('.graduates-inner__video video');
 let stringArray = [
 'создать проект дома своей мечты?',
 'начать карьеру дизайнера интерьеров?'
-]
+];
 let CharTimeout = 150;
 let StoryTimeout = 2000;
 let sliderHeader = document.querySelectorAll('.header-slide');
@@ -45,18 +45,17 @@ function startTicker(){
    currentStory     = -1;
    currentLength    = 0;
    spanPrint     = document.querySelector('.main-header__print');
-  runTheTicker();     
+  runTheTicker();
 }
-function runTheTicker(){
-  let myTimeout;  
-  if(currentLength == 0){
+function runTheTicker() {
+  let myTimeout;
+  if (currentLength === 0) {
     currentStory++;
-    currentStory      = currentStory % massiveItemCount;
-     storySummary      = stringArray[currentStory].replace(/"/g,'-');      
+    currentStory = currentStory % massiveItemCount;
+    storySummary = stringArray[currentStory].replace(/"/g,'-');
   }
   spanPrint.innerHTML = storySummary.substring(0,currentLength);
-
-  if(currentLength != storySummary.length){
+  if (currentLength !== storySummary.length) {
     currentLength++;
     myTimeout = CharTimeout;
   } else {
@@ -66,13 +65,12 @@ function runTheTicker(){
   setTimeout("runTheTicker()", myTimeout);
 }
 
-
 function slideVideoLeft() {
   if(currentWidthSlide <= -900){
     currentWidthSlide = 100
   }
   currentWidthSlide -= 100;
-  for (var i = 0; i < slideReviews.length; i++) {
+  for (let i = 0; i < slideReviews.length; i++) {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
   }
@@ -83,7 +81,7 @@ function slideVideoRight() {
     currentWidthSlide = -100
   }
   currentWidthSlide += 100;
-  for (var i = 0; i < slideReviews.length; i++) {
+  for (let i = 0; i < slideReviews.length; i++) {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
   }
@@ -92,12 +90,12 @@ let tarifiLink = document.querySelectorAll('.head-top__menu a');
 let gridId = document.querySelector('#grad');
 let tarifiId = document.querySelector('#tarifiId');
 let otziviId = document.querySelector('#otzivi');
-let fd = document.querySelector('.head-top__menu a');
 let heightLink = 0;
+let btnStart = document.querySelector('.btn--start');
+let btnOffer = document.querySelector('.btn--offer');
 
-
-tarifiLink.forEach(function(item){
-item.addEventListener('click',function(evt){
+tarifiLink.forEach(function(item) {
+item.addEventListener('click',function(evt) {
  let heightTop = 0;
   if(item.hash === '#tarifiId'){
     evt.preventDefault();
@@ -105,32 +103,45 @@ item.addEventListener('click',function(evt){
 } else if (item.hash === '#otzivi'){
       evt.preventDefault();
    heightLink = otziviId.offsetTop;
+} else if (item.hash === '#grad'){
+        evt.preventDefault();
+   heightLink = gridId.offsetTop;
 }
-   
-   function topset(){
-  if(heightTop > heightLink){
-          clearInterval(f)
-        }
-        heightTop+=50
-window.scrollTo(0,heightTop);
-
+  function topset(){
+    if(heightTop > heightLink -50){
+      clearInterval(intervalOff)
+    }
+    heightTop+=50;
+    window.scrollTo(0,heightTop);
   }
-var f = setInterval(topset, 20);  
-})
-})
-// fd.addEventListener('click', function(evt){
-//   
-//   evt.preventDefault();
-//   console.log(heightTop);
-//   heightLink = gridId.offsetTop;
-//      function topset(){
-//   if(heightTop > heightLink){
-//           clearInterval(f)
-//         }
-//         heightTop+=50
-// window.scrollTo(0,heightTop);
+  let intervalOff = setInterval(topset, 13);
+  })
+});
 
-//   }
-// var f = setInterval(topset, 50);  
-// })
+btnStart.addEventListener('click', function(evt) {
+  let heightTop = window.pageYOffset;
+  evt.preventDefault();
+  heightLink = gridId.offsetTop;
+  function topset(){
+    if(heightTop > heightLink -50){
+      clearInterval(intervalOff)
+    }
+    heightTop+=40;
+    window.scrollTo(0,heightTop);
+  }
+  let intervalOff = setInterval(topset, 23);
+});
+btnOffer.addEventListener('click', function(evt){
+  let heightTop = window.pageYOffset;
+  evt.preventDefault();
+  heightLink = tarifiId.offsetTop;
+  function topset() {
+    if(heightTop > heightLink -50){
+      clearInterval(intervalOff)
+    }
+    heightTop+=40;
+    window.scrollTo(0,heightTop);
+  }
+  let intervalOff = setInterval(topset, 23);
+});
 
