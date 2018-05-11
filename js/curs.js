@@ -12,6 +12,8 @@ let slideReviews = document.querySelectorAll('.video-slide');
 let currentWidthSlide = 0;
 let leftBtnSlide = document.querySelector('.video-control__left');
 let rightBtnSlide = document.querySelector('.video-control__right');
+let divVideoSlide = document.querySelector('.slider-video');
+divVideoSlide.style.transition = '500ms'
 
 videoStudent.volume = 0.02;
 videoStudent.setAttribute('autoplay',"");
@@ -64,8 +66,8 @@ function runTheTicker() {
   }
   setTimeout("runTheTicker()", myTimeout);
 }
-
 function slideVideoLeft() {
+
   if(currentWidthSlide <= -900){
     currentWidthSlide = 100
   }
@@ -74,7 +76,11 @@ function slideVideoLeft() {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
   }
-
+  if(currentWidthSlide < -100){
+    divVideoSlide.style.height = '350px'
+  } else {
+    divVideoSlide.style.height = '100%'
+  }
 }
 function slideVideoRight() {
   if(currentWidthSlide >= 0){
@@ -84,6 +90,11 @@ function slideVideoRight() {
   for (let i = 0; i < slideReviews.length; i++) {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
+  }
+  if(currentWidthSlide < -100){
+    divVideoSlide.style.height = '350px';
+  } else {
+    divVideoSlide.style.height = '100%'
   }
 }
 let tarifiLink = document.querySelectorAll('.head-top__menu a');
