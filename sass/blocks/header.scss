@@ -1,5 +1,14 @@
 .main-header{
   min-height:100vh;
+  position: relative;
+  &::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    width:100%;
+    height:150px;
+    background-color: rgba(0,0,0, .55);
+  }
   &__title{
     z-index: 1;
     position: relative;
@@ -26,6 +35,10 @@
     opacity: 1;
     animation: 800ms ease 0s normal none infinite running caret;
   }
+}
+.top{
+  background-color: rgba(0,0,0, .6);
+
 }
 .head-top{
   display: flex;
@@ -142,6 +155,9 @@
   .main-header{
     &__title{
       font-size: 35px;
+    }
+    &::after{
+      height: 215px;
     }
   }
     .btn--start{

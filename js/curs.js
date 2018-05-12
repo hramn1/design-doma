@@ -1,4 +1,4 @@
-let videoStudent = document.querySelector('.graduates-inner__video video');
+
 let stringArray = [
 'создать проект дома своей мечты?',
 'начать карьеру дизайнера интерьеров?'
@@ -15,8 +15,6 @@ let rightBtnSlide = document.querySelector('.video-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
 divVideoSlide.style.transition = '500ms'
 
-videoStudent.volume = 0.02;
-videoStudent.setAttribute('autoplay',"");
 
 setInterval(nextSlide,4000);
 startTicker();

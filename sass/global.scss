@@ -1,16 +1,8 @@
 @font-face {
-  font-family:"Roboto";
-  font-weight:700;
-  font-style:normal;
-  src:url(../fonts/Robotobold.woff2) format("woff2"),
-  url(../fonts/Robotobold.woff) format("woff");
-}
-@font-face {
-  font-family:"Roboto";
+  font-family:"BauhausLightCTT";
   font-weight:400;
   font-style:normal;
-  src:url(../fonts/Roboto.woff2) format("woff2"),
-  url(../fonts/Roboto.woff) format("woff");
+  src:url(../fonts/BauhausLightCTT.woff2) format("woff2");
 }
 @font-face {
   font-family: "fontello";
@@ -25,7 +17,7 @@ a:hover {
   opacity: 0.7;
 }
 body {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "BauhausLightCTT", "Arial", sans-serif;
   background-color: $white;
   font-size: 14px;
   line-height: 140%;
