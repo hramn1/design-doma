@@ -1,14 +1,20 @@
 @font-face {
-  font-family:"BauhausLightCTT";
-  font-weight:400;
-  font-style:normal;
-  src:url(../fonts/BauhausLightCTT.woff2) format("woff2");
+  font-family:"bahaus";
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/bahaus.woff') format("woff");
+}
+@font-face {
+  font-family:"bahaus";
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/bahaus-regular.woff') format("woff");
 }
 @font-face {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  src: url(../fonts/fontello.woff2) format("woff2");
+  src: url('../fonts/fontello.woff2') format("woff2");
 }
 img, video {
   max-width:100%;
@@ -17,7 +23,7 @@ a:hover {
   opacity: 0.7;
 }
 body {
-  font-family: "BauhausLightCTT", "Arial", sans-serif;
+  font-family: "bahaus", "Arial", sans-serif;
   background-color: $white;
   font-size: 14px;
   line-height: 140%;
