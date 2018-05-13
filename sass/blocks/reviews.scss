@@ -12,6 +12,7 @@
 .slider-video, .picture-slider{
   overflow: hidden;
   display: flex;
+  align-items: flex-start;
 }
 .video-slide, .img-slide{
   width: 100%;

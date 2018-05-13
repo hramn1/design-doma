@@ -18,7 +18,7 @@ let rightBtnSlide = document.querySelector('.video-control__right');
 let leftBtnSlideImg = document.querySelector('.slider-control__left');
 let rightBtnSlideImg = document.querySelector('.slider-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
-divVideoSlide.style.transition = '500ms';
+divVideoSlide.style.transition = 'height 1000ms ease-in 0ms';
 
 
 setInterval(nextSlide,4000);
@@ -78,7 +78,6 @@ function runTheTicker() {
   setTimeout("runTheTicker()", myTimeout);
 }
 function slideVideoLeft() {
-
   if(currentWidthSlide <= -900){
     currentWidthSlide = 100
   }
@@ -86,11 +85,13 @@ function slideVideoLeft() {
   for (let i = 0; i < slideReviews.length; i++) {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
-  }
-  if(currentWidthSlide < -100){
-    divVideoSlide.style.height = '350px'
-  } else {
-    divVideoSlide.style.height = '100%'
+    if(currentWidthSlide <= -200){
+      divVideoSlide.style.height = slideReviews[2].offsetHeight + 'px';
+    } else if (currentWidthSlide === -100){
+      divVideoSlide.style.height = slideReviews[1].offsetHeight + 'px';
+    } else{
+      divVideoSlide.style.height = slideReviews[0].offsetHeight + 'px';
+    }
   }
 }
 function slideImgLeft() {
@@ -123,11 +124,13 @@ function slideVideoRight() {
   for (let i = 0; i < slideReviews.length; i++) {
     slideReviews[i].style.transform = 'translateX(' + currentWidthSlide + '%)';
     slideReviews[i].style.transition = '2000ms';
-  }
-  if(currentWidthSlide < -100){
-    divVideoSlide.style.height = '350px';
-  } else {
-    divVideoSlide.style.height = '100%'
+    if(currentWidthSlide <= -200){
+      divVideoSlide.style.height = slideReviews[2].offsetHeight + 'px';
+    } else if (currentWidthSlide === -100){
+      divVideoSlide.style.height = slideReviews[1].offsetHeight + 'px';
+    } else{
+      divVideoSlide.style.height = slideReviews[0].offsetHeight + 'px';
+    }
   }
 }
 let tarifiLink = document.querySelectorAll('.head-top__menu a');
