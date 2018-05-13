@@ -9,11 +9,16 @@ let sliderHeader = document.querySelectorAll('.header-slide');
 let currentslide = 0;
 let slideTime = setInterval(slideVideoLeft,7000);
 let slideReviews = document.querySelectorAll('.video-slide');
+let slideImg = document.querySelectorAll('.img-slide');
+let slideTimeImg = setInterval(slideImgLeft,7000);
+let currentWidthSlideImg =0;
 let currentWidthSlide = 0;
 let leftBtnSlide = document.querySelector('.video-control__left');
 let rightBtnSlide = document.querySelector('.video-control__right');
+let leftBtnSlideImg = document.querySelector('.slider-control__left');
+let rightBtnSlideImg = document.querySelector('.slider-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
-divVideoSlide.style.transition = '500ms'
+divVideoSlide.style.transition = '500ms';
 
 
 setInterval(nextSlide,4000);
@@ -26,6 +31,14 @@ leftBtnSlide.addEventListener('click', function(){
 rightBtnSlide.addEventListener('click', function(){
   slideVideoLeft();
   clearInterval(slideTime);
+});
+leftBtnSlideImg.addEventListener('click', function(){
+  slideImgRight();
+  clearInterval(slideTimeImg);
+});
+rightBtnSlideImg.addEventListener('click', function(){
+  slideImgLeft();
+  clearInterval(slideTimeImg);
 });
 
 function nextSlide(){
@@ -78,6 +91,28 @@ function slideVideoLeft() {
     divVideoSlide.style.height = '350px'
   } else {
     divVideoSlide.style.height = '100%'
+  }
+}
+function slideImgLeft() {
+
+  if(currentWidthSlideImg <= -800){
+    currentWidthSlideImg = 100
+  }
+  currentWidthSlideImg -= 100;
+  for (let i = 0; i < slideImg.length; i++) {
+    slideImg[i].style.transform = 'translateX(' + currentWidthSlideImg + '%)';
+    slideImg[i].style.transition = '2000ms';
+  }
+}
+function slideImgRight() {
+
+  if(currentWidthSlideImg >= 0){
+    currentWidthSlideImg = -100
+  }
+  currentWidthSlideImg += 100;
+  for (let i = 0; i < slideImg.length; i++) {
+    slideImg[i].style.transform = 'translateX(' + currentWidthSlideImg + '%)';
+    slideImg[i].style.transition = '2000ms';
   }
 }
 function slideVideoRight() {

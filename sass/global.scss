@@ -1,14 +1,8 @@
 @font-face {
-  font-family:"bahaus";
-  font-weight: bold;
-  font-style: normal;
-  src: url('../fonts/bahaus.woff') format("woff");
-}
-@font-face {
-  font-family:"bahaus";
+  font-family:"exo";
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/bahaus-regular.woff') format("woff");
+  src: url('../fonts/exo-20.woff') format("woff");
 }
 @font-face {
   font-family: "fontello";
@@ -23,7 +17,7 @@ a:hover {
   opacity: 0.7;
 }
 body {
-  font-family: "bahaus", "Arial", sans-serif;
+  font-family: "exo", "Arial", sans-serif;
   background-color: $white;
   font-size: 14px;
   line-height: 140%;
