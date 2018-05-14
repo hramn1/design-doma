@@ -54,10 +54,12 @@
 }
 .video-control__left, .slider-control__left{
   width: 30px;
+  height: 30px;
   cursor:pointer;
 }
 .video-control__right, .slider-control__right{
   width: 30px;
+  height: 30px;
   cursor:pointer;
 }
   @media(max-width: $tablet-sm){
