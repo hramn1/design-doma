@@ -1,3 +1,4 @@
+'use strict';
 let stringArray = [
 'создать проект дома своей мечты?',
 'начать карьеру дизайнера интерьеров?'
@@ -17,11 +18,10 @@ let rightBtnSlide = document.querySelector('.video-control__right');
 let leftBtnSlideImg = document.querySelector('.slider-control__left');
 let rightBtnSlideImg = document.querySelector('.slider-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
-divVideoSlide.style.transition = 'height 1000ms ease-in 0ms';
 
 
 setInterval(nextSlide,4000);
-startTicker();
+
 
 leftBtnSlide.addEventListener('click', function(){
   slideVideoRight();
@@ -51,21 +51,23 @@ function nextSlide(){
   }
   currentslide++
 }
+var massiveItemCount =  stringArray.length;
+var currentStory     = -1;
+var currentLength    = 0;
+var spanPrint     = document.querySelector('.main-header__print');
 
-function startTicker(){
-   massiveItemCount =  stringArray.length;
-   currentStory     = -1;
-   currentLength    = 0;
-   spanPrint     = document.querySelector('.main-header__print');
+
+
   runTheTicker();
-}
+
 function runTheTicker() {
   let myTimeout;
   if (currentLength === 0) {
     currentStory++;
     currentStory = currentStory % massiveItemCount;
-    storySummary = stringArray[currentStory].replace(/"/g,'-');
+
   }
+  var storySummary = stringArray[currentStory].replace(/"/g,'-');
   spanPrint.innerHTML = storySummary.substring(0,currentLength);
   if (currentLength !== storySummary.length) {
     currentLength++;
