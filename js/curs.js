@@ -28,7 +28,6 @@ pictureSlider.addEventListener('touchstart',swpaplider);
     function touchend (evt){
       let endCord =  evt.changedTouches[0].clientX;
       let shift = startCord - endCord;
-      console.log(shift);
       if (shift > 0){
         slideImgLeft();
       } else {
@@ -36,7 +35,6 @@ pictureSlider.addEventListener('touchstart',swpaplider);
       }
       pictureSlider.removeEventListener('touchend', touchend);
     }
-
   }
 
 setInterval(nextSlide,4000);
