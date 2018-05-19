@@ -18,6 +18,13 @@ let rightBtnSlide = document.querySelector('.video-control__right');
 let leftBtnSlideImg = document.querySelector('.slider-control__left');
 let rightBtnSlideImg = document.querySelector('.slider-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
+let pictureSlider = ducument.querySelector('.picture-slider');
+
+pictureSlider.addEventListener('touchmove', function (evt) {
+  let startCord = evt.clientX;
+  let shift = startCord - evt.clientX;
+  console.log(shift)
+})
 
 
 setInterval(nextSlide,4000);

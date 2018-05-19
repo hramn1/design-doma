@@ -65,20 +65,26 @@
   height: 60px;
   cursor:pointer;
 }
-  @media(max-width: $tablet-sm){
-    .slide{
-      flex-wrap: wrap;
-      &__video{
-        width: 100%;
-        min-height: auto;
-      }
-    }
-    .review-info{
+@media(max-width: $tablet-sm){
+  .slide{
+    flex-wrap: wrap;
+    &__video{
       width: 100%;
-      padding: 20px 5px;
-      &__desc{
-        margin: 0;
-      }
+      min-height: auto;
     }
-
   }
+  .review-info{
+    width: 100%;
+    padding: 20px 5px;
+    &__desc{
+      margin: 0;
+    }
+  }
+}
+@media(max-width: $mobile-lg){
+  .slider-control{
+    position: absolute;
+    bottom:10px;
+    width:90%;
+  }
+}

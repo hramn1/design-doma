@@ -138,4 +138,10 @@
     .tarif{
       justify-content: center;
     }
+    .tarif-item{
+      width: 300px;
+      &:hover{
+        transform: none;
+      }
+    }
   }
