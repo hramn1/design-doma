@@ -139,7 +139,8 @@
       justify-content: center;
     }
     .tarif-item{
-      width: 300px;
+      width: 350px;
+      flex-grow: 1;
       &:hover{
         transform: none;
       }

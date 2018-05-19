@@ -18,14 +18,26 @@ let rightBtnSlide = document.querySelector('.video-control__right');
 let leftBtnSlideImg = document.querySelector('.slider-control__left');
 let rightBtnSlideImg = document.querySelector('.slider-control__right');
 let divVideoSlide = document.querySelector('.slider-video');
-let pictureSlider = ducument.querySelector('.picture-slider');
+let pictureSlider = document.querySelector('.picture-slider');
 
-pictureSlider.addEventListener('touchmove', function (evt) {
-  let startCord = evt.clientX;
-  let shift = startCord - evt.clientX;
-  console.log(shift)
-})
+pictureSlider.addEventListener('touchstart',swpaplider);
 
+  function swpaplider (startevt) {
+    pictureSlider.addEventListener('touchend', touchend);
+    let startCord = startevt.changedTouches[0].clientX;
+    function touchend (evt){
+      let endCord =  evt.changedTouches[0].clientX;
+      let shift = startCord - endCord;
+      console.log(shift);
+      if (shift > 0){
+        slideImgLeft();
+      } else {
+        slideImgRight();
+      }
+      pictureSlider.removeEventListener('touchend', touchend);
+    }
+
+  }
 
 setInterval(nextSlide,4000);
 
