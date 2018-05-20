@@ -44,7 +44,7 @@
 .head-top{
   display: flex;
   padding-top: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 1;
   position: relative;
   &__logo{
@@ -124,7 +124,7 @@
     display: inline-block;
     position: relative;
     width: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     align-self:center;
     padding: 14px 20px;
     font-size: 20px;
@@ -163,7 +163,8 @@
     }
   }
     .btn--start{
-    width: auto;
+      width: auto;
+      margin-bottom: 20px;
   }
 }
   @media(max-width: $mobile-lg){

@@ -25,6 +25,8 @@
 }
 .darya .col-2{
 	width:37%;
+  flex-grow: 1;
+  text-align: right;
 }
 .darya-welcome{
   margin-top: 80px;
@@ -41,7 +43,7 @@
 .darya-name{
   font-size: 40px;
   font-weight: 900;
-  line-height: 100%;
+  line-height: 110%;
 }
 .darya-mob{
   display: none;
@@ -58,13 +60,16 @@
     width: 100%;
     padding: 10px 5px;
   }
+  .darya .col-2{
+    text-align: center;
+  }
   .darya-welcome{
     font-size: 20px;
     margin-top: 5px;
   }
   .darya-name{
-  font-size: 25px;
-  font-weight: 900;
+    font-size: 25px;
+    font-weight: 900;
 }
 .darya blockquote{
     padding: 15px;
