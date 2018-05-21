@@ -72,11 +72,12 @@
     font-weight: 900;
 }
 .darya blockquote{
-    padding: 15px;
+    padding: 15px 5px 10px 50px;
     text-align: justify;
-    margin: 50px 30px;
+    margin: 20px 5px 10px;
     color: RGB(125, 136, 148);
-    background-image: none;
+  background-size: 40px auto;
+  background-position: 10px 10px;
 }
 }
 @media(max-width: $mobile-lg) {
@@ -88,9 +89,10 @@
     margin: 0 auto;
   }
   .darya blockquote{
-    padding: 10px 6px;
+    padding: 10px 5px 10px 32px;
     margin: 0;
     text-align:left;
     font-size: 16px;
+    background-size: 20px auto;
   }
 }
