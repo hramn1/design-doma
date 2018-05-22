@@ -51,6 +51,7 @@
 .darya-present{
   font-size: 20px;
   line-height: 150%;
+  margin: 5px;
   & a{
     color:rgb(2, 136, 209);
   }
@@ -87,6 +88,9 @@
   .darya-mob{
     display: block;
     margin: 0 auto;
+  }
+  .darya-present{
+    font-size: 16px;
   }
   .darya blockquote{
     padding: 10px 5px 10px 32px;
