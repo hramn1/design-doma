@@ -154,60 +154,59 @@ function slideVideoRight() {
 }
 let tarifiLink = document.querySelectorAll('.head-top__menu a');
 let gridId = document.querySelector('#grad');
-let tarifiId = document.querySelector('#tarifiId');
 let otziviId = document.querySelector('#otzivi');
 let heightLink = 0;
 let btnStart = document.querySelector('.btn--start');
 let btnOffer = document.querySelector('.btn--offer');
 
-tarifiLink.forEach(function(item) {
-item.addEventListener('click',function(evt) {
- let heightTop = 0;
-  if(item.hash === '#tarifiId'){
-    evt.preventDefault();
-   heightLink = tarifiId.offsetTop;
-} else if (item.hash === '#otzivi'){
-      evt.preventDefault();
-   heightLink = otziviId.offsetTop;
-} else if (item.hash === '#grad'){
-        evt.preventDefault();
-   heightLink = gridId.offsetTop;
-}
-  function topset(){
-    if(heightTop > heightLink -50){
-      clearInterval(intervalOff)
-    }
-    heightTop+=50;
-    window.scrollTo(0,heightTop);
-  }
-  let intervalOff = setInterval(topset, 13);
-  })
-});
-
-btnStart.addEventListener('click', function(evt) {
-  let heightTop = window.pageYOffset;
-  evt.preventDefault();
-  heightLink = gridId.offsetTop;
-  function topset(){
-    if(heightTop > heightLink -50){
-      clearInterval(intervalOff)
-    }
-    heightTop+=40;
-    window.scrollTo(0,heightTop);
-  }
-  let intervalOff = setInterval(topset, 23);
-});
-btnOffer.addEventListener('click', function(evt){
-  let heightTop = window.pageYOffset;
-  evt.preventDefault();
-  heightLink = tarifiId.offsetTop;
-  function topset() {
-    if(heightTop > heightLink -50){
-      clearInterval(intervalOff)
-    }
-    heightTop+=40;
-    window.scrollTo(0,heightTop);
-  }
-  let intervalOff = setInterval(topset, 23);
-});
+// tarifiLink.forEach(function(item) {
+// item.addEventListener('click',function(evt) {
+//  let heightTop = 0;
+//   if(item.hash === '#tarifiId'){
+//     evt.preventDefault();
+//    heightLink = tarifiId.offsetTop;
+// } else if (item.hash === '#otzivi'){
+//       evt.preventDefault();
+//    heightLink = otziviId.offsetTop;
+// } else if (item.hash === '#grad'){
+//         evt.preventDefault();
+//    heightLink = gridId.offsetTop;
+// }
+//   function topset(){
+//     if(heightTop > heightLink -50){
+//       clearInterval(intervalOff)
+//     }
+//     heightTop+=50;
+//     window.scrollTo(0,heightTop);
+//   }
+//   let intervalOff = setInterval(topset, 13);
+//   })
+// });
+//
+// btnStart.addEventListener('click', function(evt) {
+//   let heightTop = window.pageYOffset;
+//   evt.preventDefault();
+//   heightLink = gridId.offsetTop;
+//   function topset(){
+//     if(heightTop > heightLink -50){
+//       clearInterval(intervalOff)
+//     }
+//     heightTop+=40;
+//     window.scrollTo(0,heightTop);
+//   }
+//   let intervalOff = setInterval(topset, 23);
+// });
+// btnOffer.addEventListener('click', function(evt){
+//   let heightTop = window.pageYOffset;
+//   evt.preventDefault();
+//   heightLink = tarifiId.offsetTop;
+//   function topset() {
+//     if(heightTop > heightLink -50){
+//       clearInterval(intervalOff)
+//     }
+//     heightTop+=40;
+//     window.scrollTo(0,heightTop);
+//   }
+//   let intervalOff = setInterval(topset, 23);
+// });
 
