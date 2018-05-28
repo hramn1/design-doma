@@ -81,8 +81,9 @@
     }
   }
 }
-  .slider-control{
-    position: absolute;
-    bottom:10px;
-    width:80%;
-  }
+.slider-control{
+  bottom:10px;
+  width:80%;
+  margin-top: -85px;
+  z-index: 1;
+}

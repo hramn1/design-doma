@@ -8,7 +8,8 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/fontello.woff2') format("woff2");
+  src: url('../fonts/fontello.woff2') format("woff2"),
+  url('../fonts/fontello.woff') format("woff"),;
 }
 img, video {
   max-width:100%;
