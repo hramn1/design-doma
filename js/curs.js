@@ -159,29 +159,29 @@ let heightLink = 0;
 let btnStart = document.querySelector('.btn--start');
 let btnOffer = document.querySelector('.btn--offer');
 
-tarifiLink.forEach(function(item) {
-item.addEventListener('click',function(evt) {
- let heightTop = 0;
-  if(item.hash === '#tarifiId'){
-    evt.preventDefault();
-   heightLink = tarifiId.offsetTop;
-} else if (item.hash === '#otzivi'){
+for (let i = 0; i<tarifiLink.length; i++){
+  tarifiLink[i].addEventListener('click', function (evt) {
+    let heightTop = 0;
+    if(tarifiLink[i].hash ==='#tarifiId') {
       evt.preventDefault();
-   heightLink = otziviId.offsetTop;
-} else if (item.hash === '#grad'){
-        evt.preventDefault();
+      heightLink = tarifiId.offsetTop;
+    } else if (tarifiLink[i].hash  === '#otzivi'){
+      evt.preventDefault();
+    heightLink = otziviId.offsetTop;
+ } else if (tarifiLink[i].hash  === '#grad'){
+       evt.preventDefault();
    heightLink = gridId.offsetTop;
-}
-  function topset(){
-    if(heightTop > heightLink -50){
-      clearInterval(intervalOff)
+ }
+    function topset(){
+      if(heightTop > heightLink -50){
+        clearInterval(intervalOff)
+      }
+      heightTop+=50;
+      window.scrollTo(0,heightTop);
     }
-    heightTop+=50;
-    window.scrollTo(0,heightTop);
-  }
-  let intervalOff = setInterval(topset, 13);
+    let intervalOff = setInterval(topset, 13);
   })
-});
+}
 
 btnStart.addEventListener('click', function(evt) {
   let heightTop = window.pageYOffset;
